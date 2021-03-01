@@ -27,7 +27,7 @@ game.CoreGui["Made by Dosage#9999"]:Destroy()
 end)
 
 
-section2:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
+section2:addKeybind("Toggle Keybind", Enum.KeyCode.RightShift, function()
 print("Activated Keybind")
 venyx:toggle()
 end, function()
