@@ -40,7 +40,7 @@ local page2 = venyx:addPage("Teleports", null)
 local section3 = page2:addSection("Flower Zones")
 
 for _,v in pairs(game.Workspace.FlowerZones:GetChildren()) do
-  page:addButton(v.Name, function()
+  section3:addButton(v.Name, function()
     player.Character.HumanoidRootPart.CFrame = v.CFrame
 end)
 end
