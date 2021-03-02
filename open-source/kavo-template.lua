@@ -8,7 +8,7 @@ local tab1 = Window:NewTab("Home")
 
 local section1 = tab1:NewSection("Auto Farm")
 
-section1:NewToggle("Toggle Gui", "ToggleInfo", function(state)
+section1:NewToggle("Toggle Farmer", "ToggleInfo", function(state)
     if state then
         print("Toggle On")
     else
