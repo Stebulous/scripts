@@ -24,7 +24,7 @@ end
 --tab 1
 local tab1 = win:Tab("Main", "http://www.roblox.com/asset/?id=6023426915")
 
-tab1:Slider("Walkspeed", "Makes your faster.", 0, 100,16,function(t)
+tab1:Slider("Walkspeed", "Makes you faster.", 0, 100,16,function(t)
     while wait() do
         if t then
             player.Humanoid.Walkspeed = t
