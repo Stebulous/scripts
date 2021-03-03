@@ -13,7 +13,7 @@ section1:addToggle("Auto Scooper", nil, function(value)
 if value == true then
 
     while wait() do
-      wait(2)
+      wait()
       if value == true then
         player.Character.Scooper.ClickEvent:FireServer()
         end
