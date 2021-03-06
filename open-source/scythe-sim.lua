@@ -9,33 +9,25 @@ local page = venyx:addPage("Home", 5012544693)
 local section1 = page:addSection("Auto Farm")
 local section2 = page:addSection("Misc")
 
- local function getScythe() 
-        local items = game:GetService("Players").LocalPlayer.Character:GetChildren()
-        for _,v in pairs(items) do
-            if v:isA("Tool") then
-                print("Scythe: "..v.Name)
-                return v
-            end
-        end
- end
+local function getScythe()
+       local items = game:GetService("Players").LocalPlayer.Character:GetChildren()
+       for _,v in pairs(items) do
+           if v:isA("Tool") then
+               print("Scythe: "..v.Name)
+               return v
+           end
+       end
+end
 
 
 section1:addToggle("Auto Scythe", nil, function(value)
-    
-    local scythe = getScythe()
-
-    if value == true then
-        print(value)
-        print("Toggle On")
-        while wait() do
-            wait(0.1)
-            if value == true then
-                game:GetService("ReplicatedStorage").ScytheEvent:FireServer(scythe.Name)
-            end
-        end
-    end
-
-    print("Toggled", value)
+local scythe = getScythe()
+wait(0.5)
+getgenv().AutoScythe = value
+while AutoScythe do
+wait(0.1)
+game:GetService("ReplicatedStorage").ScytheEvent:FireServer(scythe.Name)
+end
 end)
 
 
@@ -56,9 +48,9 @@ local page2 = venyx:addPage("Teleports", null)
 local section3 = page2:addSection("Teleports")
 
 for _,v in pairs(game.Workspace.WorldBoostAreas:GetChildren()) do
-    section3:addButton("Boost: "..v.Name.."%", function()
-        player.Character.HumanoidRootPart.CFrame = v.CFrame    
-    end)
+   section3:addButton("Boost: "..v.Name.."%", function()
+       player.Character.HumanoidRootPart.CFrame = v.CFrame    
+   end)
 end
 
 
