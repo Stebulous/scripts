@@ -22,11 +22,36 @@ end, function()
 print("Changed Keybind")
 end)
 
-section1:addKeybind("Steal Aimbot Keybind", Enum.KeyCode.Q, function()
-game.ReplicatedStorage.Steal:FireServer()
-end, function()
-print("Changed Keybind")
-end)
+section1:addToggle("Toggle Dunk Strength", nil, function(value)
+    while wait() do
+        wait()
+        local strength = 1e7 --put what strength you want here
+        local Plr = game:GetService("Players").LocalPlayer
+        local descs = Plr.Character:GetDescendants()
+        local desc = descs[i]
+
+        if value == true then
+    
+            if Plr.Character then
+                for i = 1, #descs do
+                if desc:IsA"BasePart"then
+                    desc.CustomPhysicalProperties = PhysicalProperties.new(100, 0.3, 0.5)
+                end
+            end
+        end
+      end
+      
+      if value == false or nil then
+        if Plr.Character then
+            for i = 1, #descs do
+            if desc:IsA"BasePart"then
+                desc.CustomPhysicalProperties = PhysicalProperties.new(0.699999988, 0.300000012, 0, 1, 100)
+            end
+        end
+    end
+  end
+      end
+    end)
 
 section2:addButton("Kill GUI", function()
 game.CoreGui["Made by Dosage#9999"]:Destroy()
