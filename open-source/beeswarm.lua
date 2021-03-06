@@ -4,6 +4,10 @@ local venyx = library.new("Made by Dosage#9999", 5013109572)
 
 local player = game:GetService("Players").LocalPlayer
 
+if not syn then
+       player.Kick("This script is made for Synapse X")
+end
+
 -- first page
 local page = venyx:addPage("Home", 5012544693)
 local section1 = page:addSection("Auto Farm")
