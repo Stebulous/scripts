@@ -1,12 +1,12 @@
 -- init
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stebulous/Venyx-UI-Library/main/source.lua"))()
 local venyx = library.new("Made by Dosage#9999", 5013109572)
 print("Made by Dosage#9999")
 
 local player = game:GetService("Players").LocalPlayer
 
-if not syn then
-       warn("This script is made for Synapse X. If it does not function properly due to your exploit, i am not going to fix it.")
+if syn then
+       venyx:Notify("Notice", "This script is made for Synapse X. If it does not function properly due to your exploit, i am not going to fix it.")
 end
 
 if not game.PlaceId == 360589910 then
