@@ -6,7 +6,7 @@ print("Made by Dosage#9999")
 local player = game:GetService("Players").LocalPlayer
 
 if not syn then
-       player:Kick("This script is made for Synapse X")
+       warn("This script is made for Synapse X. If it does not function properly due to your exploit, i am not going to fix it.")
 end
 
 if not game.PlaceId == 360589910 then
