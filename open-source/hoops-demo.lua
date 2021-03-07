@@ -19,7 +19,7 @@ local section1 = page:addSection("Aimbot")
 local section2 = page:addSection("Misc")
 local debounce = {}
 debounce.state = false
-debunce.time = 3
+debunce.time = 1
 
 section1:addKeybind("Aimbot Keybind", Enum.KeyCode.R, function()
 if debounce.state = false then
