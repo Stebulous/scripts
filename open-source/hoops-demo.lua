@@ -34,18 +34,18 @@ section1:addToggle("Toggle Dunk Strength", nil, function(value)
         local descs = Plr.Character:GetDescendants()
         local desc = descs[i]
 
-        if value == true then
+        getgenv().toggle = value
     
-            if Plr.Character then
+            if Plr.Character and getgenv().toggle == true then
                 for i = 1, #descs do
-                if desc:IsA"BasePart"then
+                if desc:IsA"BasePart" then
                     desc.CustomPhysicalProperties = PhysicalProperties.new(100, 0.3, 0.5)
                 end
             end
         end
       end
       
-      if value == false or nil then
+      if getgenv().toggle == false or nil then
         if Plr.Character then
             for i = 1, #descs do
             if desc:IsA"BasePart"then
