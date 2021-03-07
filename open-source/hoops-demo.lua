@@ -6,7 +6,7 @@ print("Made by Dosage#9999")
 local player = game:GetService("Players").LocalPlayer
 
 if not syn then
-       player.Kick("This script is made for Synapse X")
+       player:Kick("This script is made for Synapse X")
 end
 
 if not game.PlaceId == 360589910 then
