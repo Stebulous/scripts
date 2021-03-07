@@ -17,11 +17,19 @@ end
 local page = venyx:addPage("Main", 5012544693)
 local section1 = page:addSection("Aimbot")
 local section2 = page:addSection("Misc")
+local debounce = {}
+debounce.state = false
+debunce.time = 3
 
 section1:addKeybind("Aimbot Keybind", Enum.KeyCode.R, function()
+if debounce.state = false then
 game.ReplicatedStorage.Ball.StartShooting:FireServer()
 wait(0.5)
 game.ReplicatedStorage.Ball.EndShooting:InvokeServer(true, "Great")
+debounce.state = true
+wait(debounce.time)
+debounce.state = false
+end
 end, function()
 print("Changed Keybind")
 end)
