@@ -22,7 +22,7 @@ debounce.state = false
 debunce.time = 1
 
 section1:addKeybind("Aimbot Keybind", Enum.KeyCode.R, function()
-if debounce.state = false then
+if debounce.state == false then
 game.ReplicatedStorage.Ball.StartShooting:FireServer()
 wait(0.5)
 game.ReplicatedStorage.Ball.EndShooting:InvokeServer(true, "Great")
