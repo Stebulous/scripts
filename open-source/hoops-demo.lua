@@ -5,9 +5,11 @@ print("Made by Dosage#9999")
 
 local player = game:GetService("Players").LocalPlayer
 
-if syn then
+if not syn then
        venyx:Notify("Notice", "This script is made for Synapse X. If it does not function properly due to your exploit, i am not going to fix it.")
 end
+
+venyx:Notify("Notice", "Credit me in the description by name. I see all your videos :/ also dont download exes my script is open source lua code.")
 
 if not game.PlaceId == 360589910 then
     player.Kick("Wrong Game")
